@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+	<div class="container">
+		<div class="team-info">
+			<h2 style="text-align:center">Team Information : Team 03</h2>
+			<table class="table">
+			  <thead>
+				<tr>
+				  <th>Sr. No.</th>
+				  <th>Name</th>
+				  <th>ID</th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr>
+				  <td>01</td>
+				  <td>Purvi Patel</td>
+				  <td>202211023</td>
+				</tr>
+				<tr>
+				  <td>02</td>
+				  <td>Jagruti Airao</td>
+				  <td>202211031</td>
+				</tr>
+				<tr>
+				  <td>03</td>
+				  <td>Pranshu Parate</td>
+				  <td>202211063</td>
+				</tr>
+				<tr>
+				  <td>04</td>
+				  <td>Naila Nausin</td>
+				  <td>202211064</td>
+				</tr>
+			  </tbody>
+			</table>
+		</div>
+		<div class="header-container">
+			<h2 class="header" style="text-align:center">FEATURED BOOKS</h2>
+			<br>
+		</div>
+
+		{% for w,x,y,z in content %}
+			<article class="media content-section">
+			  <div class="media-body">
+			    <div class="article-metadata">
+			    	<img class="book-cover-image" src="{{ x }}" align="left" alt=""> 
+			    	<strong>{{ w }}</strong>
+			    </div>
+			    <a class="article-content"> <i>Publication year :</i> {{ y }}</a>
+			    <p class="article-content"> <i>Author :</i> {{ z }}</p>
+			  </div>
+			</article>
+		{% endfor %}
+	</div>
+
+
+{% endblock content %}
